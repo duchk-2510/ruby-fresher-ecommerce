@@ -1,0 +1,7 @@
+vi:
+  login: "Đăng nhập"
+  logout: "Đăng xuất"
+  password: "Mật khẩu"
+  incorrect_email_password: "Mật khẩu hoặc email không đúng"
+  account: "Tài khoản"
+  profile: "Thông tin cá nhân"
