@@ -74,6 +74,7 @@ class OrdersController < ApplicationController
   end
 
   def check_order_own_or_admin
+    byebug
     return if @order.user_id == session[:user_id] || current_user.admin?
 
     flash[:danger] = t "order.messages.only_owner"

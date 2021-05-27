@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     post "/shipping", to: "delivery_addresses#save_choice"
     get "/confirmation", to: "orders#new"
   end
-  resources :products
+  resources :products, except: :index
   resources :delivery_addresses, only: :create
   resources :orders, except: :new do
     member do
