@@ -23,6 +23,8 @@ gem "devise"
 gem "cancancan"
 gem "pagy", "~> 3.5"
 gem "ransack"
+gem "sidekiq"
+gem "sidekiq-scheduler"
 
 group :development, :test do
   gem "rspec-rails", "~> 4.0.1"

@@ -18,4 +18,5 @@ order:
 category:
   img_max_size: 100
 
-date_format: "%m/%d/%Y %H:%M"
+date_format: "%d/%m/%Y %H:%M"
+receive_report_email: duchkhe140530@fpt.edu.vn

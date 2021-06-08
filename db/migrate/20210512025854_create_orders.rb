@@ -12,5 +12,6 @@ class CreateOrders < ActiveRecord::Migration[6.1]
     end
     add_foreign_key :orders, :users
     add_foreign_key :orders, :delivery_addresses
+    add_index :orders, :created_at
   end
 end

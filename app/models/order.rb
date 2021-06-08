@@ -11,6 +11,7 @@ class Order < ApplicationRecord
 
   scope :newest_first, ->{order created_at: :desc}
   scope :status, ->(status){where status: status}
+  scope :created_date, ->(date){where "DATE(created_at) = ?", date}
 
   delegate :name, :phone, :address, to: :delivery_address, prefix: true
   delegate :email, to: :user, prefix: true

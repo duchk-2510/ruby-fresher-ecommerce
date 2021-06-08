@@ -1,0 +1,10 @@
+:schedule:
+  report/daily:
+    cron: "0 0 22 * * *"
+    class: Report::DailyWorker
+:dynamic: true
+:concurrency: 5
+:max_retries: 5
+:queues:
+  - default
+  - mailers

@@ -16,6 +16,10 @@ vi:
   other: "Khác"
   search: "Tìm kiếm"
   hi: "Chào"
+  report:
+    daily_report: "Báo cáo doanh thu ngày %{date}"
+    revenue: "Doanh thu"
+    total_revenue: "Tổng doanh thu"
   access_denied: "Bạn không được phép truy cập đường dẫn này"
   are_you_sure: "Bạn có chắc muốn thực hiện thao tác này?"
   errors:

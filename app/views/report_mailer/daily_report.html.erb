@@ -1,0 +1,28 @@
+<table class="table ">
+  <thead>
+    <tr>
+      <th scope="col"><%= t "product.name" %></th>
+      <th scope="col"><%= t "product.quantity" %></th>
+      <th scope="col"><%= t "report.revenue" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td>
+          <%= link_to sale.product do %>
+            <%= image_tag "https://www.mageplaza.com/assets/img/extensions/product-labels.png", size: Settings.product.img_max_size_cart %>
+            <span><%= sale.product_name %></span>
+          <% end %>
+        </td>
+        <td class="align-middle"><%= sale.quantity %></td>
+        <td class="align-middle"><%= number_to_currency sale.revenue %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td></td>
+      <td><%= t "report.total_revenue" %></td>
+      <td><%= number_to_currency @total_revenue %></td>
+    </tr>
+  </tbody>
+</table>

@@ -59,4 +59,6 @@ Rails.application.configure do
   # config.action_view.annotate_rendered_view_with_filenames = true
   host = "localhost:3000"
   config.action_mailer.default_url_options = {host: host, protocol: "http"}
+  config.active_job.queue_adapter = :test
+  config.action_mailer.perform_deliveries = false
 end

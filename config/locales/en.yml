@@ -16,6 +16,10 @@ en:
   other: "Other"
   search: "Search"
   hi: "Hi"
+  report:
+    daily_report: "Sales report date %{date}"
+    revenue: "Revenue"
+    total_revenue: "Total revenue"
   access_denied: "You are not authorized to access the url"
   are_you_sure: "Are you sure about performing this operation?"
   errors:
