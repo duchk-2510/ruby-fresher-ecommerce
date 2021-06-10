@@ -75,7 +75,7 @@ end
 def fake_order_for_user user
   order = Order.new(
     status: Faker::Number.within(range: 0..4),
-    created_at: Faker::Time.between(from: DateTime.now - 100, to: DateTime.now),
+    created_at: Faker::Time.between(from: DateTime.now - 30, to: DateTime.now),
     delivery_address_id: user.delivery_addresses.sample.id,
     user_id: user.id
   )
@@ -104,4 +104,9 @@ end
   next unless user.delivery_addresses.count > 0
 
   fake_order_for_user user
+end
+
+(0..30).step(1) do |n|
+  date = Date.today - n
+  Sale.statisticize_sale date
 end

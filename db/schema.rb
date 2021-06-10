@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_155032) do
     t.bigint "delivery_address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_orders_on_created_at"
     t.index ["delivery_address_id"], name: "fk_rails_9fa1dd8f1c"
     t.index ["user_id"], name: "fk_rails_f868b47f6a"
   end
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_155032) do
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["date"], name: "index_sales_on_date"
     t.index ["product_id"], name: "fk_rails_afd82832c8"
   end
 

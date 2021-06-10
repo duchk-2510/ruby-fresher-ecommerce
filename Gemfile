@@ -25,6 +25,8 @@ gem "pagy", "~> 3.5"
 gem "ransack"
 gem "sidekiq"
 gem "sidekiq-scheduler"
+gem "chartkick"
+gem "groupdate"
 
 group :development, :test do
   gem "rspec-rails", "~> 4.0.1"

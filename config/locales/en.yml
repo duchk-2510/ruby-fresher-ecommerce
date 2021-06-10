@@ -16,6 +16,12 @@ en:
   other: "Other"
   search: "Search"
   hi: "Hi"
+  revenue_statistics: "Revenue statistics"
+  statistics:
+    by_day: "by day"
+    by_month: "by month"
+    by_year: "by year"
+    unit: "Unit"
   report:
     daily_report: "Sales report date %{date}"
     revenue: "Revenue"

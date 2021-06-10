@@ -1,0 +1,14 @@
+<%= form_tag statistics_chart_change_page_path(type: locals[:type], page: @page - 1),
+             remote: true, style: "display: inline-block;" do %>
+  <%= submit_tag t("will_paginate.previous_label"), class: "btn btn-primary" %>
+<% end %>
+<div style="display: inline-block; width: 70%;">
+  <%= line_chart statistics_chart_data_path(type: locals[:type], page: @page),
+                 title: "#{t :revenue_statistics} #{t('statistics.by_' + locals[:type])}",
+                 ytitle: "#{t("statistics.unit")}: #{number_to_currency 1000000}",
+                 thousands: "," %>
+</div>
+<%= form_tag statistics_chart_change_page_path(type: locals[:type], page: @page + 1),
+             remote: true, style: "display: inline-block;" do %>
+  <%= submit_tag t("will_paginate.next_label"), class: "btn btn-primary" %>
+<% end %>

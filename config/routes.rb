@@ -1,6 +1,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'statistics/show'
+  end
   root "static_pages#home"
   devise_for :users, path: "", path_names: {
     sign_in: "/login",
@@ -45,4 +48,10 @@ Rails.application.routes.draw do
     end
   end
   mount Sidekiq::Web, at: "/sidekiq"
+
+  scope :statistics, as: :statistics  do
+    get "show", to: "statistics#show"
+    get "chart_data/:type/:page", to: "statistics#chart_data", as: :chart_data
+    post "chart_change_page/:type/:page", to: "statistics#chart_change_page", as: :chart_change_page
+  end
 end

@@ -11,10 +11,13 @@
     <div class="collapse navbar-collapse" id="nav-bar-items">
       <ul class="nav navbar-nav">
         <% if can? :read, Order %>
-          <li><%= link_to t("order.my_orders"), orders_path %>
+          <li><%= link_to t("order.my_orders"), orders_path %></li>
         <% end %>
         <% if can? :manage, Order %>
-          <li><%= link_to t("order.admin_orders"), admin_orders_path %>
+          <li><%= link_to t("order.admin_orders"), admin_orders_path %></li>
+        <% end %>
+        <% if can? :read, :statistics %>
+          <li><%= link_to t("revenue_statistics"), statistics_show_path %></li>
         <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">

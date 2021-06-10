@@ -1,0 +1,7 @@
+<% provide :title, t(:revenue_statistics) %>
+<div id="chart_sales_by_day_div" style="text-align:center;"><%= render "sales_chart", locals: {type: "day"} %></div>
+<br><hr><br>
+<div id="chart_sales_by_month_div" style="text-align:center;"><%= render "sales_chart", locals: {type: "month"} %></div>
+<br><hr><br>
+<div id="chart_sales_by_year_div" style="text-align:center;"><%= render "sales_chart", locals: {type: "year"} %></div>
+

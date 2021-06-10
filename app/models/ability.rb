@@ -13,6 +13,7 @@ class Ability
       return unless user.admin?
 
       can :manage, Order
+      can :read, :statistics
     end
   end
 end

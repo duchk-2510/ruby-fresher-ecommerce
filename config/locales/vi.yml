@@ -16,6 +16,12 @@ vi:
   other: "Khác"
   search: "Tìm kiếm"
   hi: "Chào"
+  revenue_statistics: "Thống kê doanh thu"
+  statistics:
+    by_day: "theo ngày"
+    by_month: "theo tháng"
+    by_year: "theo năm"
+    unit: "Đơn vị"
   report:
     daily_report: "Báo cáo doanh thu ngày %{date}"
     revenue: "Doanh thu"
@@ -26,8 +32,8 @@ vi:
     general: "Có lỗi xảy ra trong quá trình thực hiện, vui lòng thử lại"
     unavailable_url: "Đường dẫn không hợp lệ"
   will_paginate:
-    previous_label: "&#8592; Quay lại"
-    next_label: "Tiếp theo &#8594;"
+    previous_label: "Trước đó"
+    next_label: "Tiếp theo"
     page_gap: "&hellip;"
   number:
     currency:

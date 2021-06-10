@@ -20,3 +20,5 @@ category:
 
 date_format: "%d/%m/%Y %H:%M"
 receive_report_email: duchkhe140530@fpt.edu.vn
+
+sales_data_per_page: 7
